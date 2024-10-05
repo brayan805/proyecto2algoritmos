@@ -33,4 +33,4 @@ Comenzaremos con el menú, donde le aparece una serie de opciones en donde usted
 * Ingrese los nuevos datos.
 * Listo los datos del producto han sido modificados.
 
-Presione la opció 4 en el menú para salir.
+Presione la opción 4 en el menú para salir.
