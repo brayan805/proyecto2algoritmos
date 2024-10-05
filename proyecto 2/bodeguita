@@ -1,0 +1,40 @@
+import os
+import random
+import string
+import importlib
+cerrar=1
+while (cerrar>=1):
+    print("Bienvenido a Mi Bodeguita""\n""Del siguiente menu ingrese el numero de la opcion que desea ejecutar""\n")
+    print("1. Agregar Productos""\n""2. Buscar un producto""\n""3. Modificar los datos de un producto""\n")
+    opc=int(input("ingrese el numero de la opcion""\n"))
+    os.system("cls")
+    if opc>=4:
+        print("Favor ingresar una opcion valida")
+    elif opc==1:
+            print("En este menu podra hacer lo siguiente:""\n")
+            print("1. Ingresar un nuevo producto""\n""2. Actualizar un producto""\n")
+            opcionagregar=int(input("Ingrese el numero de la opcion""\n"))
+            abecedario=('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+            abcd=("")
+            codigo=("")
+            if opcionagregar==1:
+                 productos=importlib.import_module("agregar_productos")
+                 productos.agregar()
+            elif opcionagregar==2:
+                 modif=importlib.import_module("modificar")
+                 modif.modificar()
+    elif opc==2:
+         salir=0;
+         while salir<1:
+               buscar=importlib.import_module("bus")
+               buscar.buscarr()
+               input("desea realizar otra busqueda?""\n""Si necesita salir ingrese un numero mayor a 1")
+               os.system("cls")
+    elif opc==3:
+         salir=0;
+         while salir<1:
+              modif=importlib.import_module("modificar")
+              modif.modificar()
+              salir=int(input("Desea modificar otro producto?""\n""si desea salir ingrese un numero mayor a 1""\n"))
+              os.system("cls")
+    cerrar=int(input("Si desea cerrar el programa ingrese un numero mayor a 1"))
